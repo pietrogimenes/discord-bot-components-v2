@@ -1,0 +1,42 @@
+name: Reportar um bug
+description: Algo não funciona como deveria
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de abrir, veja a seção **Problemas comuns** do README.
+        **Nunca cole seu token ou o conteúdo do `.env`.**
+  - type: textarea
+    id: description
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o problema e o que você esperava que acontecesse.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. Use o comando /...
+        2. Clique em ...
+        3. Veja o erro
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou prints
+      description: Cole o erro do terminal ou um print do Discord. Remova qualquer token.
+      render: shell
+  - type: input
+    id: node
+    attributes:
+      label: Versão do Node.js
+      placeholder: "22.11.0"
+  - type: input
+    id: version
+    attributes:
+      label: Versão do projeto
+      placeholder: "1.0.0"

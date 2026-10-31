@@ -1,0 +1,26 @@
+name: Sugerir uma funcionalidade
+description: Uma ideia de comando ou recurso novo
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Qual é a ideia?
+      description: Explique o que o recurso faz e por que seria útil.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Exemplo de uso
+      description: Como o comando ou recurso seria usado no Discord?
+  - type: dropdown
+    id: database
+    attributes:
+      label: Precisa guardar dados?
+      options:
+        - Não
+        - Sim, poderia usar arquivo local
+        - Sim, precisa de banco de dados
+    validations:
+      required: true
